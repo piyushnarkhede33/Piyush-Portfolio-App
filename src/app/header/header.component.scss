@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+
+  .nav-link {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.o-fullname {
+  font-weight: 500;
+}
+
+.o-name {
+  color: white;
+}
+
+.o-surname {
+  color: #00ffa6;
+}

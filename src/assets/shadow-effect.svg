@@ -1,0 +1,18 @@
+<svg width="1572" height="795" viewBox="0 0 1572 795" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="mask0_340_660" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1572" height="795">
+    <rect width="1572" height="795" fill="#D9D9D9"/>
+  </mask>
+  <g mask="url(#mask0_340_660)">
+    <!-- Only purple blur remains -->
+    <g opacity="0.4" filter="url(#filter1_f_340_660)">
+      <ellipse cx="645.778" cy="-170.165" rx="362.917" ry="211.851" transform="rotate(46.3553 645.778 -170.165)" fill="#8244FF"/>
+    </g>
+  </g>
+  <defs>
+    <filter id="filter1_f_340_660" x="48.0703" y="-774.799" width="1195.42" height="1209.27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="152" result="effect1_foregroundBlur_340_660"/>
+    </filter>
+  </defs>
+</svg>

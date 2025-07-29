@@ -1,0 +1,13 @@
+<!-- From Uiverse.io by Creatlydev -->
+<button class="button" style="--clr: #ff6464">
+  <span class="button-decor"></span>
+  <div class="button-content">
+    <div *ngIf="buttonName == 'Download CV'" class="button-icon">
+      <i class="fa-solid fa-download"></i>
+    </div>
+    <div *ngIf="buttonName == 'Contact Me'" class="button-icon">
+      <i class="fa-solid fa-circle-user"></i>
+    </div>
+    <span class="button-text">{{ buttonName }}</span>
+  </div>
+</button>

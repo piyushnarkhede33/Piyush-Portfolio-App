@@ -1,0 +1,49 @@
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+
+  .about-content-1 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .about-content-2 {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .about-content-1,
+    .about-content-2 {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.question {
+  color: #00ffa6;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.answer {
+  text-align: justify;
+  font-size: 1.25rem;
+  padding: 1rem 0rem;
+  line-height: 2rem;
+}
+
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}

@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.text-pink {
+  color: #ff5f56;
+}
+.text-orange {
+  color: #fb923c;
+}
+.text-gray {
+  color: #9ca3af;
+}
+.text-cyan {
+  color: #22d3ee;
+}
+.text-amber {
+  color: #fcd34d;
+}
+.text-green {
+  color: #27c93f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d1224 !important;
+  background-image: url("/assets/gradient.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.default-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 1rem;
+  width: 100%;
+}
+
+.top-shadow-effect {
+  background-image: url("/assets/shadow-effect.svg");
+  background-repeat: no-repeat;
+}
+
+.a-red {
+  color: #ffffff;
+  font-size: large;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.a-red::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #ff6464;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.a-red:hover::after {
+  width: 100%;
+  left: 0;
+  background: #ff6464;
+}
+
+.a-red:hover,
+.a-red:active {
+  color: #ff6464;
+}
+
+.heading-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem 0rem 4rem 0rem;
+
+  .line {
+    height: 4px;
+    background: #0d1224;
+    width: 10%;
+  }
+
+  .page-heading {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: #0d1224;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+.coder-box {
+  background: #0f172a; /* dark navy */
+  background: linear-gradient(90deg, #0d1224 25%, #101257 200%);
+  color: #e2e8f0; /* light text */
+  border: 1px solid #1b1e71;
+  width: 100%;
+  padding: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.glow-box {
+  position: relative;
+  padding: 1px;
+  margin: 0rem 1rem;
+}
+
+.glow-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 6px;
+  background: linear-gradient(to right, #1b1e71, #ff4d4d, #ff00ff, #1b1e71);
+  border-radius: 5px;
+  box-shadow: 0 0 30px 1px rgba(255, 0, 255, 0.3);
+}
+
+.mac-header {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background-color: #ff5f56;
+}
+.yellow {
+  background-color: #ffbd2e;
+}
+.green {
+  background-color: #27c93f;
+}

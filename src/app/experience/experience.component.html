@@ -1,0 +1,22 @@
+<section id="experience" class="default-container top-shadow-effect">
+  <div class="heading-wrapper">
+    <div class="line"></div>
+    <div class="page-heading">EXPERIENCE</div>
+    <div class="line"></div>
+  </div>
+  <div class="experience-card">
+    <div *ngFor="let exp of experiences" class="card-detail">
+      <div class="glow-box"></div>
+      <div class="coder-box rounded-top">
+        <div class="mac-header">
+          <span class="circle red"></span>
+          <span class="circle yellow"></span>
+          <span class="circle green"></span>
+        </div>
+      </div>
+      <div class="coder-box rounded-bottom">
+        {{ exp.companyName }}
+      </div>
+    </div>
+  </div>
+</section>

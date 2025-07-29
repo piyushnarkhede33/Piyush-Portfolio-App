@@ -1,0 +1,140 @@
+<section id="home" class="default-container">
+  <div class="content">
+    <div class="content-1">
+      <div class="home-content">
+        <div>Hello,</div>
+        <div>
+          This is
+          <span class="home-author">PIYUSH NARKHEDE</span>
+          , I'm a
+          <span id="dynamic-text">{{ dynamicText }}</span>
+        </div>
+      </div>
+      <div class="media-content">
+        <div class="media-icon">
+          <a
+            href="https://www.linkedin.com/in/piyushnarkhede33/"
+            target="_blank"
+            class="a-blue"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="media-icon">
+          <a
+            href="https://github.com/piyushnarkhede33"
+            target="_blank"
+            class="a-blue"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <div class="media-icon">
+          <a href="mailto:piyushnarkhede08@gmail.com" class="a-blue">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="btn">
+        <app-button [buttonName]="'Contact Me'"></app-button>
+        <app-button [buttonName]="'Download CV'"></app-button>
+      </div>
+    </div>
+    <div class="content-2">
+      <div class="glow-box"></div>
+      <div class="coder-box rounded-top">
+        <div class="mac-header">
+          <span class="circle red"></span>
+          <span class="circle yellow"></span>
+          <span class="circle green"></span>
+        </div>
+      </div>
+      <div class="coder-box rounded-bottom">
+        <div>
+          <span class="me-2 text-pink">const</span>
+          <span class="me-2">coder</span>
+          <span class="me-2 text-pink">=</span>
+          <span class="text-gray">{{ "{" }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">name:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">Piyush Narkhede</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div class="ms-4 me-2">
+          <span>skills:</span>
+          <span class="text-gray">{{ "['" }}</span>
+          <span class="text-amber">Java</span>
+          <span class="text-gray">{{ "', '" }}</span>
+          <span class="text-amber">SpringBoot</span>
+          <span class="text-gray">{{ "', '" }}</span>
+          <span class="text-amber">Spring Microservices</span>
+          <span class="text-gray">{{ "', '" }}</span>
+          <span class="text-amber">Redis</span>
+          <span class="text-gray">{{ "', '" }}</span>
+          <span class="text-amber">Html</span>
+          <span class="text-gray">{{ "', '" }}</span>
+          <span class="text-amber">Typescript</span>
+          <span class="text-gray">{{ "', '" }}</span>
+          <span class="text-amber">Angular</span>
+          <span class="text-gray">{{ "', '" }}</span>
+          <span class="text-amber">MySql</span>
+          <span class="text-gray">{{ "', '" }}</span>
+          <span class="text-amber">MongoDB</span>
+          <span class="text-gray">{{ "']," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 me-2">hardWorker:</span>
+          <span class="text-orange">true</span>
+          <span class="text-gray">,</span>
+        </div>
+        <div>
+          <span class="ms-4 me-2">quickLearner:</span>
+          <span class="text-orange">true</span>
+          <span class="text-gray">,</span>
+        </div>
+        <div>
+          <span class="ms-4 me-2">problemSolver:</span>
+          <span class="text-orange">true</span>
+          <span class="text-gray">,</span>
+        </div>
+        <div>
+          <span class="ms-4 me-2 text-green">hireable:</span>
+          <span class="text-orange">function</span>
+          <span class="text-gray">{{ "() {" }}</span>
+        </div>
+        <div>
+          <span class="ms-5 me-2 text-orange">return</span>
+          <span class="text-gray">{{ "(" }}</span>
+        </div>
+        <div>
+          <span class="ms-6 text-cyan">this.</span>
+          <span class="me-2">hardWorker</span>
+          <span class="text-amber">&amp;&amp;</span>
+        </div>
+        <div>
+          <span class="ms-6 text-cyan">this.</span>
+          <span class="me-2">problemSolver</span>
+          <span class="text-amber">&amp;&amp;</span>
+        </div>
+        <div>
+          <span class="ms-6 text-cyan">this.</span>
+          <span class="me-2">skills.length</span>
+          <span class="me-2 text-amber">&gt;=</span>
+          <span class="text-orange">5</span>
+        </div>
+        <div>
+          <span class="ms-5 me-2 text-gray">{{ ");" }}</span>
+        </div>
+        <div>
+          <span class="ms-4 text-gray">{{ "};" }}</span>
+        </div>
+        <div>
+          <span class="text-gray">{{ "};" }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

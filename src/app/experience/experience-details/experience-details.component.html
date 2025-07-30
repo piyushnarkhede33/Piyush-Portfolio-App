@@ -1,0 +1,125 @@
+<div class="experience-card">
+  <div class="card-detail">
+    <div class="glow-box"></div>
+    <div class="coder-box rounded-top">
+      <div class="mac-header">
+        <div class="mac-controls">
+          <span class="circle red"></span>
+          <span class="circle yellow"></span>
+          <span class="circle green"></span>
+        </div>
+        <mat-icon class="close-button cursor-pointer" (click)="close()"
+          >close</mat-icon
+        >
+      </div>
+      <div></div>
+    </div>
+    <div class="coder-box rounded-bottom">
+      <div>
+        <span class="me-2 text-pink">const</span>
+        <span class="me-2">experience</span>
+        <span class="me-2 text-pink">=</span>
+        <span class="text-gray">{{ "{" }}</span>
+      </div>
+      <div>
+        <span class="ms-4 mr-2">name:</span>
+        <span class="text-gray">{{ "'" }}</span>
+        <span class="text-orange">{{ exp.name }}</span>
+        <span class="text-gray">{{ "'," }}</span>
+      </div>
+      <div>
+        <span class="ms-4 mr-2">role:</span>
+        <span class="text-gray">{{ "'" }}</span>
+        <span class="text-orange">{{ exp.role }}</span>
+        <span class="text-gray">{{ "'," }}</span>
+      </div>
+      <div class="ms-4 me-2">
+        <div>
+          <span>company:</span>
+          <span class="ms-2 text-gray">{{ "{" }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">companyName:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-green">{{ exp.company.companyName }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">designation:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-green">{{ exp.company.designation }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">duration:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ exp.company.duration }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">location:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ exp.company.location }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="text-gray">{{ "}," }}</span>
+        </div>
+      </div>
+
+      <div class="ms-4 me-2">
+        <span>skills:</span>
+        <span class="ms-2 text-gray">{{ "['" }}</span>
+        <span *ngFor="let skill of exp.skills; let i = index">
+          <span class="text-amber">{{ skill }}</span>
+          <span *ngIf="exp.skills.length - 1 != i" class="text-gray">{{
+            "', '"
+          }}</span>
+        </span>
+        <span class="text-gray">{{ "']," }}</span>
+      </div>
+
+      <div class="ms-4 me-2">
+        <div>
+          <span>contributions:</span>
+          <span class="ms-2 text-gray">{{ "{" }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">dataProcessingBoost:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{
+            exp.contributions.dataProcessingBoost
+          }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">queryOptimization:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{
+            exp.contributions.queryOptimization
+          }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">leadership:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ exp.contributions.leadership }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">apiDevelopment:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ exp.contributions.apiDevelopment }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="text-gray">{{ "}," }}</span>
+        </div>
+      </div>
+
+      <div>
+        <span class="text-gray">{{ "};" }}</span>
+      </div>
+    </div>
+  </div>
+</div>

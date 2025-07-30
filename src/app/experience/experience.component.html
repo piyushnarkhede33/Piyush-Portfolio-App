@@ -5,17 +5,67 @@
     <div class="line"></div>
   </div>
   <div class="experience-card">
-    <div *ngFor="let exp of experiences" class="card-detail">
+    <div
+      *ngFor="let exp of experiences"
+      class="card-detail"
+      (click)="openDetails(exp)"
+    >
       <div class="glow-box"></div>
       <div class="coder-box rounded-top">
         <div class="mac-header">
-          <span class="circle red"></span>
-          <span class="circle yellow"></span>
-          <span class="circle green"></span>
+          <div class="mac-controls">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+          </div>
         </div>
       </div>
       <div class="coder-box rounded-bottom">
-        {{ exp.companyName }}
+        <div>
+          <span class="me-2 text-pink">const</span>
+          <span class="me-2">experience</span>
+          <span class="me-2 text-pink">=</span>
+          <span class="text-gray">{{ "{" }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">companyName:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-orange">{{ exp.company.companyName }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">designation:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-green">{{ exp.company.designation }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">duration:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ exp.company.duration }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">location:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ exp.company.location }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+
+        <div class="ms-4 me-2">
+          <span>skills:</span>
+          <span class="text-gray">{{ "['" }}</span>
+          <span *ngFor="let skill of exp.skills; let i = index">
+            <span class="text-amber">{{ skill }}</span>
+            <span *ngIf="exp.skills.length - 1 != i" class="text-gray">{{
+              "', '"
+            }}</span>
+          </span>
+          <span class="text-gray">{{ "']," }}</span>
+        </div>
+        <div>
+          <span class="text-gray">{{ "};" }}</span>
+        </div>
       </div>
     </div>
   </div>

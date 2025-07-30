@@ -52,6 +52,39 @@ body {
   background-repeat: no-repeat;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.neon-hover {
+  // position: relative;
+  // width: 300px;
+  // height: 200px;
+  // padding: 1rem;
+  // background-color: #0d0d0d;
+  // border-radius: 12px;
+  // color: white;
+  transition: box-shadow 0.2s ease;
+  // overflow: hidden;
+
+  // --x: 50%;
+  // --y: 50%;
+  // box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.neon-hover:hover {
+  overflow: hidden;
+
+  --x: 50%;
+  --y: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  box-shadow: calc((var(--x) - 50%) * 1px) calc((var(--y) - 50%) * 1px) 20px
+      rgba(168, 85, 247, 0.6),
+    0 0 25px rgba(168, 85, 247, 0.3);
+  transition: box-shadow 0.05s ease;
+  cursor: pointer;
+}
+
 .a-red {
   color: #ffffff;
   font-size: large;
@@ -113,7 +146,7 @@ body {
   color: #e2e8f0; /* light text */
   border: 1px solid #1b1e71;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1rem;
   position: relative;
   font-size: 1rem;
   font-family: "Fira Code", monospace;
@@ -141,10 +174,16 @@ body {
 
 .mac-header {
   display: flex;
+  justify-content: space-between; // ensures circles on left, icon (if present) on right
+  align-items: center;
+  // padding: 14px 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mac-controls {
+  display: flex;
   gap: 8px;
-  position: absolute;
-  top: 18px;
-  left: 18px;
 }
 
 .circle {
@@ -152,14 +191,30 @@ body {
   height: 12px;
   border-radius: 50%;
   display: inline-block;
+
+  &.red {
+    background-color: #ff5f56;
+  }
+  &.yellow {
+    background-color: #ffbd2e;
+  }
+  &.green {
+    background-color: #27c93f;
+  }
 }
 
-.red {
-  background-color: #ff5f56;
+.close-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #000;
+  }
 }
-.yellow {
-  background-color: #ffbd2e;
-}
-.green {
-  background-color: #27c93f;
+
+.mat-mdc-dialog-surface {
+  background-color: transparent !important;
+  border-radius: 0 !important;
 }

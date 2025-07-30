@@ -11,6 +11,7 @@ import { ProjectsComponent } from './projects/projects.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     AboutComponent,
     HomeComponent,

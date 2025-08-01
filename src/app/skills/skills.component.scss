@@ -1,0 +1,56 @@
+::ng-deep .carousel-item {
+  transition: transform 20s linear !important; /* 2s duration with linear easing */
+  width: 1200px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.svg-slide {
+  height: 100px;
+}
+
+.svg-wrapper {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.infinite-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  // background: transparent;
+}
+
+.infinite-carousel-track {
+  display: flex;
+  // width: max-content;
+  gap: 20px;
+  animation: scroll-left 10s linear infinite;
+}
+
+.carousel-items {
+  flex: 0 0 auto;
+  // padding: 0 10px;
+}
+
+.carousel-items img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -5,6 +5,7 @@ import { ExperienceDetailsComponent } from './experience-details/experience-deta
 
 @Component({
   selector: 'app-experience',
+  standalone: true,
   imports: [CommonModule, MatDialogModule],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss',

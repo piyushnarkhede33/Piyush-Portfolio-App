@@ -1,52 +1,54 @@
-::ng-deep .carousel-item {
-  transition: transform 20s linear !important; /* 2s duration with linear easing */
-  width: 1200px;
-}
-
-.carousel-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.svg-slide {
-  height: 100px;
-}
-
-.svg-wrapper {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-}
-
-.infinite-carousel-wrapper {
+.carousel-container {
   overflow: hidden;
   width: 100%;
-  // background: transparent;
+  padding: 1rem 0;
 }
 
-.infinite-carousel-track {
+.carousel-track {
   display: flex;
-  // width: max-content;
-  gap: 20px;
-  animation: scroll-left 10s linear infinite;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track.paused {
+  animation-play-state: paused;
 }
 
 .carousel-items {
   flex: 0 0 auto;
-  // padding: 0 10px;
+  padding: 0 1rem;
 }
 
-.carousel-items img {
-  height: 80px;
-  width: auto;
-  object-fit: contain;
-  display: block;
+.tech-card {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s;
+  color: #fff;
+  background-color: #0d1224;
 }
 
-/* Animation */
-@keyframes scroll-left {
+.tech-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.411);
+}
+
+.tech-card img {
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.tech-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@keyframes scroll {
   0% {
     transform: translateX(0);
   }

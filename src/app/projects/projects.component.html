@@ -1,1 +1,65 @@
-<p>projects works!</p>
+<section id="projects" class="default-container top-shadow-effect">
+  <div class="heading-wrapper">
+    <div class="line"></div>
+    <div class="page-heading">PROJECTS</div>
+    <div class="line"></div>
+  </div>
+  <div class="project-card">
+    <div
+      *ngFor="let project of projects"
+      class="project-detail"
+      (click)="openDetails(project)"
+    >
+      <div class="glow-box"></div>
+      <div class="coder-box rounded-top">
+        <div class="mac-header">
+          <div class="mac-controls">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+          </div>
+        </div>
+      </div>
+      <div class="coder-box rounded-bottom" style="min-height: 226px;">
+        <div>
+          <span class="me-2 text-pink">const</span>
+          <span class="me-2">project</span>
+          <span class="me-2 text-pink">=</span>
+          <span class="text-gray">{{ "{" }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">name:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-orange">{{ project.name }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">role:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-green">{{ project.role }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">duration:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ project.duration }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div> 
+        <div class="ms-4 me-2">
+          <span>tools:</span>
+          <span class="text-gray">{{ "['" }}</span>
+          <span *ngFor="let tool of project.tools; let i = index">
+            <span class="text-amber">{{ tool }}</span>
+            <span *ngIf="project.tools.length - 1 != i" class="text-gray">{{
+              "', '"
+            }}</span>
+          </span>
+          <span class="text-gray">{{ "']," }}</span>
+        </div>
+        <div>
+          <span class="text-gray">{{ "};" }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

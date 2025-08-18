@@ -19,59 +19,81 @@ export class SkillsComponent {
     {
       id: '1',
       src: '../../assets/skills/java.svg',
-      alt: 'Slide 1',
+      name: 'Java',
     },
     {
       id: '2',
       src: '../../assets/skills/springboot.svg',
-      alt: 'Slide 2',
+      name: 'SpringBoot',
     },
     {
       id: '3',
       src: '../../assets/skills/redis.svg',
-      alt: 'Slide 3',
+      name: 'Redis',
     },
     {
       id: '4',
       src: '../../assets/skills/mysql.svg',
-      alt: 'Slide 4',
+      name: 'MySQL',
+    },
+    {
+      id: '5',
+      src: '../../assets/skills/oracle.svg',
+      name: 'OracleSQL',
+    },
+    {
+      id: '6',
+      src: '../../assets/skills/mongodb.svg',
+      name: 'Mongo DB',
+    },
+    {
+      id: '7',
+      src: '../../assets/skills/html.svg',
+      name: 'HTML',
+    },
+    {
+      id: '8',
+      src: '../../assets/skills/css.svg',
+      name: 'CSS',
+    },
+    {
+      id: '9',
+      src: '../../assets/skills/javascript.svg',
+      name: 'JavaScript',
+    },
+    {
+      id: '10',
+      src: '../../assets/skills/typescript.svg',
+      name: 'TypeScript',
+    },
+    {
+      id: '11',
+      src: '../../assets/skills/angular.svg',
+      name: 'Angular',
+    },
+    {
+      id: '12',
+      src: '../../assets/skills/nginx.svg',
+      name: 'Nginx',
+    },
+    {
+      id: '13',
+      src: '../../assets/skills/jboss.svg',
+      name: 'Jboss',
+    },
+    {
+      id: '14',
+      src: '../../assets/skills/git.svg',
+      name: 'Git',
+    },
+    {
+      id: '15',
+      src: '../../assets/skills/microsoftoffice.svg',
+      name: 'Microsoft Office',
     },
   ];
 
   repeatedImages = [...this.images, ...this.images];
 
   paused = false;
-  unpauseOnArrow = false;
-  pauseOnIndicator = false;
-  pauseOnHover = true;
-  pauseOnFocus = true;
-
-  @ViewChild('carousel', { static: true }) carousel: NgbCarousel | any;
-
-  togglePaused() {
-    if (this.paused) {
-      this.carousel.cycle();
-    } else {
-      this.carousel.pause();
-    }
-    this.paused = !this.paused;
   }
-
-  onSlide(slideEvent: NgbSlideEvent) {
-    if (
-      this.unpauseOnArrow &&
-      slideEvent.paused &&
-      (slideEvent.source === NgbSlideEventSource.ARROW_LEFT ||
-        slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
-    ) {
-      this.togglePaused();
-    }
-    if (
-      this.pauseOnIndicator &&
-      !slideEvent.paused &&
-      slideEvent.source === NgbSlideEventSource.INDICATOR
-    ) {
-      this.togglePaused();
-    }
-  }
-}

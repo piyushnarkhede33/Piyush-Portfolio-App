@@ -11,6 +11,10 @@
     display: flex;
     gap: 1.5rem;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .o-fullname {

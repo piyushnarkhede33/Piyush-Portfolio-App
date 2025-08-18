@@ -4,34 +4,21 @@
     <div class="page-heading">SKILLS</div>
     <div class="line"></div>
   </div>
-  <div *ngIf="images.length" class="carousel-wrapper">
-    <ngb-carousel
-      #carousel
-      [showNavigationArrows]="false"
-      [showNavigationIndicators]="false"
-      [interval]="5000"
-      [pauseOnHover]="pauseOnHover"
-      [pauseOnFocus]="pauseOnFocus"
-      (slide)="onSlide($event)"
-    >
-      @for (img of images; track img; let i = $index) {
-      <ng-template ngbSlide>
-        <div class="d-flex justify-content-center align-items-center svg-slide">
-          <img
-            [src]="img.src"
-            class="svg-wrapper"
-            alt="My image {{ i + 1 }} description"
-          />
-        </div>
-      </ng-template>
-      }
-    </ngb-carousel>
-  </div>
-  <!-- <div class="infinite-carousel-wrapper">
-    <div class="infinite-carousel-track">
-      <div class="carousel-items" *ngFor="let img of repeatedImages">
-        <img [src]="img.src" alt="logo" />
+  <div class="carousel-container" (mouseenter)="paused = true" (mouseleave)="paused = false">
+  <div class="carousel-track" [ngClass]="{ paused: paused }">
+    <div class="carousel-items" *ngFor="let img of images">
+      <div class="tech-card">
+        <img [src]="img.src" alt="{{ img.name }}" />
+        <p>{{ img.name }}</p>
       </div>
     </div>
-  </div> -->
+    <!-- Duplicate to achieve seamless scroll -->
+    <div class="carousel-items" *ngFor="let img of images">
+      <div class="tech-card">
+        <img [src]="img.src" alt="{{ img.name }}" />
+        <p>{{ img.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
 </section>

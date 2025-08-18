@@ -1,1 +1,65 @@
-<p>education works!</p>
+<section id="education" class="default-container top-shadow-effect">
+  <div class="heading-wrapper">
+    <div class="line"></div>
+    <div class="page-heading">EDUCATION</div>
+    <div class="line"></div>
+  </div>
+  <div class="education-card">
+    <div
+      *ngFor="let edu of educations"
+      class="education-detail"
+    >
+      <div class="glow-box"></div>
+      <div class="coder-box rounded-top">
+        <div class="mac-header">
+          <div class="mac-controls">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+          </div>
+        </div>
+      </div>
+      <div class="coder-box rounded-bottom" style="min-height: 226px;">
+        <div>
+          <span class="me-2 text-pink">const</span>
+          <span class="me-2">education</span>
+          <span class="me-2 text-pink">=</span>
+          <span class="text-gray">{{ "{" }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">degree:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-orange">{{ edu.degree }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">university:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-green">{{ edu.universityName}}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">duration:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ edu.duration }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">location:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ edu.location }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="ms-4 mr-2">percentage:</span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ edu.percentage }}</span>
+          <span class="text-gray">{{ "'," }}</span>
+        </div>
+        <div>
+          <span class="text-gray">{{ "};" }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

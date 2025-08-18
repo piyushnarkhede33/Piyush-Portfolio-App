@@ -1,0 +1,23 @@
+.education-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .education-detail {
+        flex: 0 1 calc(50% - 2rem);
+        max-width: 100%;
+        cursor: pointer;
+        transition: transform 0.3s;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .education-detail {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+}

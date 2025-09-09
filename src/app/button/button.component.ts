@@ -9,4 +9,15 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() buttonName: string = '';
+
+  onButtonClick() {
+    if (this.buttonName === 'Download CV') {
+      window.open(
+        'https://drive.google.com/file/d/1qhhyIgbF-xsVHr0IfBlRwruC751z3iaS/view?usp=drive_link',
+        '_blank'
+      );
+    } else if (this.buttonName === 'Contact Me') {
+      window.location.hash = '#footer';
+    }
+  }
 }

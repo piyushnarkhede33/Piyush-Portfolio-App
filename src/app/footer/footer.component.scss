@@ -28,7 +28,22 @@
     flex-direction: column;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 425px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-content-1,
+    .footer-content-2 {
+      flex: 0 1 calc(100% - 2rem);
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 426px) and (max-width: 768px) {
     .footer-content {
       flex-direction: column;
       align-items: center;
@@ -75,6 +90,12 @@ a {
 }
 
 .footer-contact {
+  display: flex;
+  width: max-content;
+  color: #ff6464;
+}
+
+.footer-bottom {
   color: #ff6464;
 }
 

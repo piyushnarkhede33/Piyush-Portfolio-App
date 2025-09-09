@@ -20,7 +20,7 @@
           </div>
         </div>
       </div>
-      <div class="coder-box rounded-bottom" style="min-height: 226px;">
+      <div class="coder-box rounded-bottom" style="min-height: 226px">
         <div>
           <span class="me-2 text-pink">const</span>
           <span class="me-2">experience</span>
@@ -28,32 +28,32 @@
           <span class="text-gray">{{ "{" }}</span>
         </div>
         <div>
-          <span class="ms-4 mr-2">companyName:</span>
+          <span class="ms-4 mr-2">companyName: </span>
           <span class="text-gray">{{ "'" }}</span>
           <span class="text-orange">{{ exp.company.companyName }}</span>
           <span class="text-gray">{{ "'," }}</span>
         </div>
         <div>
-          <span class="ms-4 mr-2">designation:</span>
+          <span class="ms-4 mr-2">designation: </span>
           <span class="text-gray">{{ "'" }}</span>
           <span class="text-green">{{ exp.company.designation }}</span>
           <span class="text-gray">{{ "'," }}</span>
         </div>
         <div>
-          <span class="ms-4 mr-2">duration:</span>
+          <span class="ms-4 mr-2">duration: </span>
           <span class="text-gray">{{ "'" }}</span>
           <span class="text-amber">{{ exp.company.duration }}</span>
           <span class="text-gray">{{ "'," }}</span>
         </div>
         <div>
-          <span class="ms-4 mr-2">location:</span>
+          <span class="ms-4 mr-2">location: </span>
           <span class="text-gray">{{ "'" }}</span>
           <span class="text-amber">{{ exp.company.location }}</span>
           <span class="text-gray">{{ "'," }}</span>
         </div>
 
         <div class="ms-4 me-2">
-          <span>skills:</span>
+          <span>skills: </span>
           <span class="text-gray">{{ "['" }}</span>
           <span *ngFor="let skill of exp.skills; let i = index">
             <span class="text-amber">{{ skill }}</span>
@@ -61,7 +61,7 @@
               "', '"
             }}</span>
           </span>
-          <span class="text-gray">{{ "']," }}</span>
+          <span class="text-gray">{{ "']" }}</span>
         </div>
         <div>
           <span class="text-gray">{{ "};" }}</span>

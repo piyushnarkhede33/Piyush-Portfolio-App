@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class BackToTopComponent {
   scrollToSection(sectionId: string) {
+    // window.location.hash = sectionId;
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });

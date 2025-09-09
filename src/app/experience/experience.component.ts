@@ -78,6 +78,7 @@ export class ExperienceComponent {
     this.dialog.open(ExperienceDetailsComponent, {
       data: exp,
       width: '80%',
+      height: '90%',
       maxWidth: '796px',
     });
   }

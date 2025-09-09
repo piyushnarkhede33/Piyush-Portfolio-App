@@ -1,6 +1,6 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, Inject, NgZone, OnInit } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -27,9 +27,13 @@ export class HomeComponent implements OnInit {
   deletingSpeed: number = 50;
   delayBetweenPhrases: number = 1500;
 
-  constructor(private ngZone: NgZone) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private ngZone: NgZone
+  ) {}
 
   ngOnInit(): void {
+    this.document.location.hash = 'home';
     this.ngZone.runOutsideAngular(() => {
       setTimeout(() => this.startTyping(), 500);
     });

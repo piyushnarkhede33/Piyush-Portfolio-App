@@ -18,3 +18,5 @@ $spacers: (
 @use "bootstrap/scss/bootstrap" with (
   $spacers: $spacers
 );
+
+@use "bootstrap-icons/font/bootstrap-icons";

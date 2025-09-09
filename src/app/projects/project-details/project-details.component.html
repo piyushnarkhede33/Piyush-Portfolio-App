@@ -14,109 +14,95 @@
       </div>
       <div></div>
     </div>
-    <div class="coder-box rounded-bottom">
+    <div class="coder-box rounded-bottom" style="min-height: 335px">
       <div>
         <span class="me-2 text-pink">const</span>
-        <span class="me-2">experience</span>
+        <span class="me-2">project</span>
         <span class="me-2 text-pink">=</span>
         <span class="text-gray">{{ "{" }}</span>
       </div>
       <div>
-        <span class="ms-4 mr-2">name:</span>
+        <span class="ms-4 mr-2">name: </span>
         <span class="text-gray">{{ "'" }}</span>
-        <span class="text-orange">{{ exp.name }}</span>
+        <span class="text-orange">{{ project.name }}</span>
         <span class="text-gray">{{ "'," }}</span>
       </div>
       <div>
-        <span class="ms-4 mr-2">role:</span>
+        <span class="ms-4 mr-2">role: </span>
         <span class="text-gray">{{ "'" }}</span>
-        <span class="text-orange">{{ exp.role }}</span>
+        <span class="text-green">{{ project.role }}</span>
+        <span class="text-gray">{{ "'," }}</span>
+      </div>
+      <div>
+        <span class="ms-4 mr-2">duration: </span>
+        <span class="text-gray">{{ "'" }}</span>
+        <span class="text-amber">{{ project.duration }}</span>
         <span class="text-gray">{{ "'," }}</span>
       </div>
       <div class="ms-4 me-2">
-        <div>
-          <span>company:</span>
-          <span class="ms-2 text-gray">{{ "{" }}</span>
-        </div>
-        <div>
-          <span class="ms-4 mr-2">companyName:</span>
-          <span class="text-gray">{{ "'" }}</span>
-          <span class="text-green">{{ exp.company.companyName }}</span>
-          <span class="text-gray">{{ "'," }}</span>
-        </div>
-        <div>
-          <span class="ms-4 mr-2">designation:</span>
-          <span class="text-gray">{{ "'" }}</span>
-          <span class="text-green">{{ exp.company.designation }}</span>
-          <span class="text-gray">{{ "'," }}</span>
-        </div>
-        <div>
-          <span class="ms-4 mr-2">duration:</span>
-          <span class="text-gray">{{ "'" }}</span>
-          <span class="text-amber">{{ exp.company.duration }}</span>
-          <span class="text-gray">{{ "'," }}</span>
-        </div>
-        <div>
-          <span class="ms-4 mr-2">location:</span>
-          <span class="text-gray">{{ "'" }}</span>
-          <span class="text-amber">{{ exp.company.location }}</span>
-          <span class="text-gray">{{ "'," }}</span>
-        </div>
-        <div>
-          <span class="text-gray">{{ "}," }}</span>
-        </div>
-      </div>
-
-      <div class="ms-4 me-2">
-        <span>skills:</span>
-        <span class="ms-2 text-gray">{{ "['" }}</span>
-        <span *ngFor="let skill of exp.skills; let i = index">
-          <span class="text-amber">{{ skill }}</span>
-          <span *ngIf="exp.skills.length - 1 != i" class="text-gray">{{
+        <span>tools: </span>
+        <span class="text-gray">{{ "['" }}</span>
+        <span *ngFor="let tool of project.tools; let i = index">
+          <span class="text-amber">{{ tool }}</span>
+          <span *ngIf="project.tools.length - 1 != i" class="text-gray">{{
             "', '"
           }}</span>
         </span>
         <span class="text-gray">{{ "']," }}</span>
       </div>
-
+      <div class="ms-4 me-2">
+        <span>overview: </span>
+        <span class="text-gray">{{ "'" }}</span>
+        <span class="text-amber">{{ project.overview }}</span>
+        <span class="text-gray">{{ "'," }}</span>
+      </div>
+      <div class="ms-4 me-2">
+        <span>features: </span>
+        <span class="text-gray">{{ "[" }}</span>
+        <div>
+          <span *ngFor="let feat of project.features; let i = index">
+            <div class="ms-4 me-2">
+              <span class="text-amber">'{{ feat }}'</span>
+              <span
+                *ngIf="project.features.length - 1 != i"
+                class="text-gray"
+                >{{ "," }}</span
+              >
+            </div>
+          </span>
+        </div>
+        <span class="text-gray">{{ "]," }}</span>
+      </div>
       <div class="ms-4 me-2">
         <div>
-          <span>contributions:</span>
-          <span class="ms-2 text-gray">{{ "{" }}</span>
+          <span>contributions: </span>
+          <span class="text-gray">{{ "{" }}</span>
+          <div>
+            <span
+              *ngFor="let contribution of project.contributions; let i = index"
+            >
+              <div class="ms-4 me-2">
+                <span>{{ contribution.key }} : </span>
+                <span class="text-amber">'{{ contribution.value }}'</span>
+                <span
+                  *ngIf="project.contributions.length - 1 != i"
+                  class="text-gray"
+                  >{{ ", " }}</span
+                >
+              </div>
+            </span>
+          </div>
+          <div>
+            <span class="text-gray">{{ "}," }}</span>
+          </div>
         </div>
         <div>
-          <span class="ms-4 mr-2">dataProcessingBoost:</span>
+          <span>impact: </span>
           <span class="text-gray">{{ "'" }}</span>
-          <span class="text-amber">{{
-            exp.contributions.dataProcessingBoost
-          }}</span>
+          <span class="text-amber">{{ project.impact }}</span>
           <span class="text-gray">{{ "'," }}</span>
-        </div>
-        <div>
-          <span class="ms-4 mr-2">queryOptimization:</span>
-          <span class="text-gray">{{ "'" }}</span>
-          <span class="text-amber">{{
-            exp.contributions.queryOptimization
-          }}</span>
-          <span class="text-gray">{{ "'," }}</span>
-        </div>
-        <div>
-          <span class="ms-4 mr-2">leadership:</span>
-          <span class="text-gray">{{ "'" }}</span>
-          <span class="text-amber">{{ exp.contributions.leadership }}</span>
-          <span class="text-gray">{{ "'," }}</span>
-        </div>
-        <div>
-          <span class="ms-4 mr-2">apiDevelopment:</span>
-          <span class="text-gray">{{ "'" }}</span>
-          <span class="text-amber">{{ exp.contributions.apiDevelopment }}</span>
-          <span class="text-gray">{{ "'," }}</span>
-        </div>
-        <div>
-          <span class="text-gray">{{ "}," }}</span>
         </div>
       </div>
-
       <div>
         <span class="text-gray">{{ "};" }}</span>
       </div>

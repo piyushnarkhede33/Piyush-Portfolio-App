@@ -2,46 +2,62 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin: 0rem auto;
-  padding: 1rem 0rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 1rem 0rem;
 
   .content-1 {
+    flex: 0 1 calc(50% - 2rem);
     display: flex;
     flex-direction: column;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
     font-weight: 500;
-    width: 50%;
   }
 
   .content-2 {
+    flex: 0 1 calc(50% - 2rem);
+    font-size: clamp(2rem, 1.5vw, 1.5rem);
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
-    width: 50%;
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
+    .content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
     .content-1,
     .content-2 {
+      flex: 0 1 calc(50% - 2rem);
       width: 100%;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .content {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1201px) {
+    .content {
+      gap: 3rem;
     }
   }
 }
 
 .home-content {
   margin: 2rem 0rem;
+  font-size: clamp(3rem, 1.5vw, 1.5rem);
 }
 
 .home-author {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 2vw, 2rem);
   color: #ff6464;
   margin-bottom: 1rem;
-  height: 6rem;
 }
 
 #dynamic-text {
@@ -49,7 +65,7 @@
   padding-right: 5px;
   animation: blink-caret 0.7s step-end infinite;
   color: #00ffa6;
-  line-height: 4rem;
+  line-height: 2rem;
 }
 
 @keyframes blink-caret {
@@ -65,27 +81,24 @@
 .btn {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 2rem;
-  margin: 1rem 0rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
   padding: 0;
 }
 
 .media-content {
   display: flex;
   gap: 1rem;
-  width: 100%;
   font-size: 2rem;
-  margin: 1rem 0rem;
+  margin: 1rem 0;
 }
 
-.media-icon{
+.media-icon {
   transition: transform 0.3s;
 }
 
 .media-icon a {
   color: #ff6464;
-  position: relative;
   text-decoration: none;
 }
 

@@ -20,7 +20,7 @@
           </div>
         </div>
       </div>
-      <div class="coder-box rounded-bottom" style="min-height: 226px;">
+      <div class="coder-box rounded-bottom" style="min-height: 335px">
         <div>
           <span class="me-2 text-pink">const</span>
           <span class="me-2">project</span>
@@ -28,25 +28,25 @@
           <span class="text-gray">{{ "{" }}</span>
         </div>
         <div>
-          <span class="ms-4 mr-2">name:</span>
+          <span class="ms-4 mr-2">name: </span>
           <span class="text-gray">{{ "'" }}</span>
           <span class="text-orange">{{ project.name }}</span>
           <span class="text-gray">{{ "'," }}</span>
         </div>
         <div>
-          <span class="ms-4 mr-2">role:</span>
+          <span class="ms-4 mr-2">role: </span>
           <span class="text-gray">{{ "'" }}</span>
           <span class="text-green">{{ project.role }}</span>
           <span class="text-gray">{{ "'," }}</span>
         </div>
         <div>
-          <span class="ms-4 mr-2">duration:</span>
+          <span class="ms-4 mr-2">duration: </span>
           <span class="text-gray">{{ "'" }}</span>
           <span class="text-amber">{{ project.duration }}</span>
           <span class="text-gray">{{ "'," }}</span>
-        </div> 
+        </div>
         <div class="ms-4 me-2">
-          <span>tools:</span>
+          <span>tools: </span>
           <span class="text-gray">{{ "['" }}</span>
           <span *ngFor="let tool of project.tools; let i = index">
             <span class="text-amber">{{ tool }}</span>
@@ -55,6 +55,12 @@
             }}</span>
           </span>
           <span class="text-gray">{{ "']," }}</span>
+        </div>
+        <div class="ms-4 me-2">
+          <span>overview: </span>
+          <span class="text-gray">{{ "'" }}</span>
+          <span class="text-amber">{{ project.overview }}</span>
+          <span class="text-gray">{{ "'," }}</span>
         </div>
         <div>
           <span class="text-gray">{{ "};" }}</span>

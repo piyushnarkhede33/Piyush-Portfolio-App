@@ -8,11 +8,11 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'app-project-details',
   imports: [CommonModule, MatIconModule],
   templateUrl: './project-details.component.html',
-  styleUrl: './project-details.component.scss'
+  styleUrl: './project-details.component.scss',
 })
 export class ProjectDetailsComponent {
-constructor(
-    @Inject(MAT_DIALOG_DATA) public exp: any,
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public project: any,
     public dialogRef: MatDialogRef<ExperienceDetailsComponent>
   ) {}
 

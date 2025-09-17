@@ -13,7 +13,7 @@ export class ButtonComponent {
   onButtonClick() {
     if (this.buttonName === 'Download CV') {
       window.open(
-        'https://drive.google.com/file/d/1qhhyIgbF-xsVHr0IfBlRwruC751z3iaS/view?usp=drive_link',
+        'https://drive.google.com/file/d/1zhijTBqwX3TjtbzkuXvTi2vZxN_U5r88/view?usp=drive_link',
         '_blank'
       );
     } else if (this.buttonName === 'Contact Me') {
